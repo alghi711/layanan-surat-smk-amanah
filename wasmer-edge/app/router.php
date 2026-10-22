@@ -9,6 +9,21 @@ header('Pragma: no-cache');
 header('Vary: Cookie');
 
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+if (getenv('AMANA_MAINTENANCE') === '1') {
+    http_response_code(503);
+    header('Retry-After: 3600');
+    if ($path === '/api' || str_starts_with($path, '/api/')) {
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode(['error' => 'Website sedang dalam pemeliharaan. Silakan coba kembali nanti.']);
+    } else {
+        header('Content-Type: text/html; charset=utf-8');
+        echo <<<'HTML'
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Maintenance - SMK Amanah</title><style>*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#eef6fd;color:#12345f;font-family:system-ui,sans-serif}main{max-width:520px;text-align:center;background:white;border:1px solid #dce6f1;border-radius:22px;padding:44px 30px}small{font-weight:700;letter-spacing:.12em;color:#1765e9}h1{font-size:30px;line-height:1.25}p{color:#526987;line-height:1.7}</style></head><body><main><small>SMK AMANAH</small><h1>Website sedang dalam pemeliharaan</h1><p>Layanan surat sementara tidak tersedia. Silakan kunjungi kembali setelah pemeliharaan selesai.</p><p>Terima kasih atas kesabaran Anda.</p></main></body></html>
+HTML;
+    }
+    exit;
+}
+
 if ($path === '/api' || str_starts_with($path, '/api/')) {
     require __DIR__ . '/api.php';
     exit;

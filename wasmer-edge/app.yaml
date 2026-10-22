@@ -5,6 +5,7 @@ owner: alghifari1235
 package: .
 env:
   AMANA_ENV: production
+  AMANA_MAINTENANCE: "1"
   AMANA_BACKEND: supabase
   AMANA_DASHBOARD_BATCH: "1"
   AMANA_MIGRATING: "0"

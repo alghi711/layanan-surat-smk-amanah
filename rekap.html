@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102e53">
+  <title>Rekap Laporan Surat — SMK Amanah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tu.css">
+  <link rel="stylesheet" href="branding.css">
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="rekap.css?v=20261020-hover1">
+  <script>try{if(sessionStorage.getItem('amanah_brand_intro_v2'))document.documentElement.classList.add('school-intro-skip');else sessionStorage.setItem('amanah_brand_intro_v2','1')}catch(e){}</script>
+  <link rel="stylesheet" href="site-loader.css?v=20261019-2">
+  <link rel="preload" as="image" href="assets/logo-smk-amanah.png">
+  <script src="site-loader.js?v=20261019-2" defer></script>
+</head>
+<body>
+  <div class="school-intro" aria-hidden="true">
+    <div class="school-intro-inner">
+      <span class="school-intro-kicker">Selamat datang di</span>
+      <div class="school-intro-mark"><img src="assets/logo-smk-amanah.png" alt="" width="202" height="202" loading="eager" fetchpriority="high"></div>
+      <p class="school-intro-title">SMK AMANAH</p>
+      <p class="school-intro-subtitle">PORTAL LAYANAN SURAT</p>
+      <div class="school-intro-track"></div>
+      <p class="school-intro-caption">Pelayanan mudah, proses transparan.</p>
+    </div>
+  </div>
+  <aside class="sidebar">
+    <a class="side-brand" href="index.html"><span class="school-logo"><img src="assets/logo-smk-amanah.png" alt="Logo SMK Amanah" width="68" height="64"></span><span><strong>SMK AMANAH</strong><small>LAYANAN SURAT</small></span></a>
+    <nav class="side-nav" aria-label="Menu petugas">
+      <a href="tu.html"><span aria-hidden="true">▤</span>Menu Petugas</a>
+      <a href="rekap.html" class="active" aria-current="page"><span aria-hidden="true">▥</span>Rekap laporan</a>
+      <a href="index.html"><span aria-hidden="true">⌂</span>Portal Orang Tua</a>
+    </nav>
+    <div class="side-account"><span class="account-avatar">AD</span><span><b>Admin Sekolah</b><small>Rekap administrasi</small></span></div>
+  </aside>
+  <main class="workspace">
+    <header class="topbar"><div class="breadcrumbs"><a href="tu.html">Menu Petugas</a><i>/</i><b>Rekap laporan</b></div><a class="report-back" href="tu.html">← Kembali ke dashboard</a></header>
+    <section class="content report-content">
+      <div class="page-heading"><div><span class="overline">ADMINISTRASI SEKOLAH</span><h1>Rekap laporan surat</h1><p>Pantau layanan surat dan siapkan laporan sekolah dalam satu tempat.</p></div><div class="report-actions"><button type="button" class="report-button" id="report-refresh">↻ Muat ulang</button><button type="button" class="report-button" id="report-print" disabled>Cetak laporan</button><button type="button" class="report-button primary" id="report-export" disabled>↓ Ekspor Excel</button></div></div>
+      <p id="report-sync" class="report-sync" role="status" aria-live="polite">Mengambil data pengajuan…</p>
+      <section class="report-filters" aria-labelledby="filter-heading">
+        <div class="filter-heading"><div><h2 id="filter-heading">Atur laporan Anda</h2><p>Periode berdasarkan tanggal pengajuan (WIB).</p></div><button type="button" class="text-button" id="report-reset">Reset filter</button></div>
+        <div class="period-shortcuts" aria-label="Periode cepat"><button type="button" data-period="month" aria-pressed="true">Bulan ini</button><button type="button" data-period="previous" aria-pressed="false">Bulan lalu</button><button type="button" data-period="year" aria-pressed="false">Tahun ini</button><button type="button" data-period="all" aria-pressed="false">Semua waktu</button></div>
+        <div class="filter-grid">
+          <label>Dari tanggal<input type="date" id="report-from"></label>
+          <label>Sampai tanggal<input type="date" id="report-to"></label>
+          <label>Jenis surat<select id="report-type"><option value="">Semua jenis surat</option></select></label>
+          <label>Jurusan<select id="report-major"><option value="">Semua jurusan</option><optgroup label="TKJ"><option value="TKJ">Semua TKJ</option><option>TKJ 1</option><option>TKJ 2</option></optgroup><optgroup label="TKR"><option value="TKR">Semua TKR</option><option>TKR 1</option><option>TKR 2</option></optgroup><option>MP</option></select></label>
+          <label>Status<select id="report-status"><option value="">Semua status</option><option>Menunggu konfirmasi TU</option><option>Disetujui Tata Usaha</option><option>Menunggu persetujuan Kepala Sekolah</option><option>Selesai</option><option>Ditolak oleh TU</option><option>Ditolak Kepala Sekolah</option></select></label>
+          <label>Cari pengajuan<input type="search" id="report-search" placeholder="Nomor, nama siswa, atau pemohon" maxlength="120"></label>
+        </div>
+        <p id="report-filter-error" class="report-error" role="alert" hidden></p>
+      </section>
+      <section class="report-summary" aria-label="Ringkasan hasil filter">
+        <article class="report-stat"><span class="report-stat-icon blue" aria-hidden="true">▤</span><div><small>Total pengajuan</small><b id="report-total">—</b></div></article>
+        <article class="report-stat"><span class="report-stat-icon amber" aria-hidden="true">◷</span><div><small>Menunggu TU</small><b id="report-pending">—</b></div></article>
+        <article class="report-stat"><span class="report-stat-icon violet" aria-hidden="true">↗</span><div><small>Dalam proses</small><b id="report-processing">—</b></div></article>
+        <article class="report-stat"><span class="report-stat-icon green" aria-hidden="true">✓</span><div><small>Selesai</small><b id="report-done">—</b></div></article>
+        <article class="report-stat"><span class="report-stat-icon red" aria-hidden="true">×</span><div><small>Ditolak</small><b id="report-rejected">—</b></div></article>
+      </section>
+      <p class="summary-hint">Ringkasan mengikuti filter. Dalam proses: disetujui TU atau menunggu persetujuan kepala sekolah.</p>
+      <section class="list-panel report-panel" aria-labelledby="result-heading">
+        <header class="panel-heading"><div><h2 id="result-heading">Daftar pengajuan</h2><p id="report-period-label">Menyiapkan laporan…</p></div><span class="total-badge" id="report-count">0 pengajuan</span></header>
+        <div class="table-scroll"><table class="report-table"><caption class="sr-only">Pengajuan sesuai filter laporan</caption><thead><tr><th scope="col">NO.</th><th scope="col">NOMOR / TANGGAL</th><th scope="col">SISWA / PEMOHON</th><th scope="col">KELAS / JURUSAN</th><th scope="col">JENIS SURAT</th><th scope="col">STATUS</th></tr></thead><tbody id="report-rows"></tbody></table></div>
+        <div class="report-empty" id="report-empty" hidden><span aria-hidden="true">▤</span><h3>Belum ada data ditampilkan</h3><p id="report-empty-text">Tunggu sampai pengajuan selesai dimuat.</p></div>
+        <footer class="report-pagination"><span id="report-page-label">—</span><div><button type="button" id="report-prev" disabled>← Sebelumnya</button><button type="button" id="report-next" disabled>Berikutnya →</button></div></footer>
+      </section>
+      <p class="report-footnote">Ekspor dan cetak mencakup seluruh hasil filter, termasuk data di halaman berikutnya. Simpan laporan hanya untuk keperluan administrasi sekolah.</p>
+    </section>
+  </main>
+  <section id="report-print-area" aria-hidden="true"></section>
+  <script src="report-xlsx.js"></script>
+  <script src="rekap.js?v=20261019-rombel1"></script>
+</body>
+</html>

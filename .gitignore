@@ -1,0 +1,21 @@
+# Data siswa, dokumen unggahan, dan hasil surat tidak boleh masuk ke source control.
+/data/
+/backups/
+/restore-check/
+/private/
+/wasmer-edge/config/authorization/
+
+# File konfigurasi rahasia dan log lokal.
+.env
+.env.*
+!.env.example
+*.log
+smoke-*
+
+# Catatan operasional dan arsip lokal.
+/PROGRES.md
+*.zip
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db

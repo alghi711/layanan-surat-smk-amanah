@@ -1,0 +1,98 @@
+/* A complete campus scene: header, illustration and caption share one panel. */
+.hero-art {
+  position: relative;
+  inset: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid #cddfec;
+  border-radius: 26px;
+  background: linear-gradient(150deg, #f7fcff, #e5f3fc);
+  box-shadow: 0 22px 48px -28px #224c715c, 0 2px 6px #224c7105;
+}
+.campus-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 22px 0;
+}
+.campus-name { display: grid; gap: 4px; }
+.campus-name strong { color: #183f65; font-size: 12px; letter-spacing: .09em; }
+.campus-name small { color: #6c8498; font-size: 10px; }
+.hero-art .status-float {
+  position: static;
+  transform: none;
+  gap: 7px;
+  padding: 7px 10px;
+  border: 1px solid #d7e9dd;
+  border-radius: 30px;
+  background: #ffffffdb;
+  box-shadow: none;
+  color: #32664b;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.hero-art .status-float span { width: 21px; height: 21px; font-size: 13px; background: #3ba36c; }
+.hero-art .school {
+  position: relative;
+  inset: auto;
+  display: block;
+  flex: none;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  margin: 0;
+  transform: none;
+}
+.motion-ready .hero-art.motion-item.motion-visible:hover { transform: none; }
+.campus-caption {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 16px 22px 18px;
+  background: #fff;
+  border-top: 1px solid #dfe9ed;
+}
+.campus-caption > span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border: 1px solid #f0e3bd;
+  border-radius: 11px;
+  background: #fff7e2;
+  color: #9a7523;
+  font-size: 17px;
+}
+.campus-caption b { display: block; color: #264969; font-size: 12px; line-height: 1.5; }
+.campus-caption p { margin: 3px 0 0; color: #708397; font-size: 10px; line-height: 1.5; }
+@media (min-width: 1000px) {
+  .hero { column-gap: 32px; }
+  .hero-art { height: auto; align-self: center; }
+}
+@media (max-width: 999px) {
+  .hero { display: flex; flex-direction: column; gap: 30px; padding: 34px 30px 30px; }
+  .hero-copy { width: 100%; }
+  .hero-art { position: relative; inset: auto; width: 100%; max-width: 650px; height: auto; margin-inline: auto; }
+}
+@media (max-width: 700px) {
+  .hero { gap: 26px; padding: 30px 20px 26px; }
+  .hero-art { border-radius: 20px; }
+  .campus-bar { padding: 16px 14px 0; gap: 8px; }
+  .campus-name strong { font-size: 10px; letter-spacing: .06em; }
+  .campus-name small { font-size: 9px; }
+  .hero-art .status-float { font-size: 9px; padding: 6px 8px; gap: 5px; }
+  .hero-art .status-float span { width: 19px; height: 19px; font-size: 12px; }
+  .campus-caption { padding: 12px 14px 14px; gap: 9px; }
+  .campus-caption b { font-size: 11px; }
+  .campus-caption p { font-size: 9px; }
+}

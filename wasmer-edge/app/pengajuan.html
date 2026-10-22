@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eff6fd">
+  <title>Ajukan Surat — SMK Amanah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pengajuan.css?v=20261020-dupe1">
+  <link rel="stylesheet" href="branding.css">
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="pengajuan-static.css?v=20261022-fullscreen1">
+  <script>try{if(sessionStorage.getItem('amanah_brand_intro_v2'))document.documentElement.classList.add('school-intro-skip');else sessionStorage.setItem('amanah_brand_intro_v2','1')}catch(e){}</script>
+  <link rel="stylesheet" href="site-loader.css?v=20261019-2">
+  <link rel="preload" as="image" href="assets/logo-smk-amanah.png">
+  <script src="site-loader.js?v=20261019-2" defer></script>
+</head>
+<body class="application-page">
+  <div class="school-intro" aria-hidden="true">
+    <div class="school-intro-inner">
+      <span class="school-intro-kicker">Selamat datang di</span>
+      <div class="school-intro-mark"><img src="assets/logo-smk-amanah.png" alt="" width="202" height="202" loading="eager" fetchpriority="high"></div>
+      <p class="school-intro-title">SMK AMANAH</p>
+      <p class="school-intro-subtitle">PORTAL LAYANAN SURAT</p>
+      <div class="school-intro-track"></div>
+      <p class="school-intro-caption">Pelayanan mudah, proses transparan.</p>
+    </div>
+  </div>
+<main class="workspace">
+    <header class="application-header">
+      <a class="application-brand" href="index.html" aria-label="SMK Amanah, kembali ke beranda"><span class="school-logo"><img src="assets/logo-smk-amanah.png" alt="Logo SMK Amanah" width="52" height="52"></span><span><strong>SMK AMANAH</strong><small>LAYANAN SURAT</small></span></a>
+      <nav aria-label="Navigasi formulir"><a class="btn btn-light" href="index.html#lacak">Lacak Surat <span aria-hidden="true">→</span></a></nav>
+    </header>
+    <div class="page-content">
+      <header class="page-heading"><h1>Formulir Pengajuan Surat</h1><p>Lengkapi data berikut untuk mengajukan surat sekolah.</p></header>
+      <ol class="stepper" aria-label="Tahapan pengajuan"><li class="current" data-step-indicator="1"><span>1</span><b>Data Pemohon</b></li><li data-step-indicator="2"><span>2</span><b>Jenis Surat</b></li><li data-step-indicator="3"><span>3</span><b>Dokumen</b></li><li data-step-indicator="4"><span>4</span><b>Konfirmasi</b></li></ol>
+
+      <form id="request-form" novalidate>
+        <section class="step-panel active" data-step="1" aria-labelledby="step-one-title">
+          <article class="form-card"><div class="card-heading"><span class="card-icon">♟</span><div><h2 id="step-one-title">Data Orang Tua / Pemohon</h2><p>Masukkan data diri Anda sebagai pemohon surat.</p></div></div>
+            <label>Nama lengkap<input name="parent" required maxlength="80" placeholder="Contoh: Budi Santoso" autocomplete="name"></label>
+            <label>Nomor WhatsApp<input name="phone" type="tel" required maxlength="20" placeholder="Contoh: 0812 3456 7890" autocomplete="tel"><small>Nomor WhatsApp aktif untuk menerima informasi pengajuan surat.</small></label>
+            <label>Email <span class="optional">(Opsional)</span><input name="email" type="email" maxlength="120" placeholder="Contoh: nama@email.com" autocomplete="email"><small>Untuk informasi kontak; notifikasi email belum tersedia pada prototipe ini.</small></label>
+            <label>Hubungan dengan siswa<select name="relation" required><option value="">Pilih hubungan</option><option>Ayah</option><option>Ibu</option><option>Wali</option></select></label>
+          </article>
+          <article class="form-card"><div class="card-heading"><span class="card-icon">◆</span><div><h2>Data Siswa</h2><p>Masukkan data siswa yang terkait dengan pengajuan surat.</p></div></div>
+            <label>Nama siswa<input name="student" required maxlength="80" placeholder="Contoh: Ahmad Rizky Pratama"></label>
+            <label>NIS / NISN<input name="nis" required maxlength="20" inputmode="numeric" placeholder="Contoh: 12345678 atau 0123456789"></label>
+            <div class="field-pair"><label>Kelas<select name="className" required><option value="">Pilih kelas</option><option>X</option><option>XI</option><option>XII</option></select></label><label>Jurusan<select name="major" required><option value="">Pilih jurusan</option><option value="TKJ 1">TKJ 1</option><option value="TKJ 2">TKJ 2</option><option value="TKR 1">TKR 1</option><option value="TKR 2">TKR 2</option><option value="MP">MP</option></select></label></div>
+          </article>
+        </section>
+
+        <section class="step-panel" data-step="2" aria-labelledby="step-two-title" hidden>
+          <article class="form-card"><div class="card-heading"><span class="card-icon">▤</span><div><h2 id="step-two-title">Jenis Surat</h2><p>Pilih jenis surat yang akan diajukan.</p></div></div><label>Jenis surat<select name="type" required><option value="">Pilih jenis surat</option><option>Surat keterangan siswa</option><option>Surat keterangan aktif sekolah</option><option>Surat pengantar</option><option>Surat izin</option><option>Surat rekomendasi</option><option>Lainnya</option></select><small>Pilih jenis surat sesuai dengan kebutuhan Anda.</small></label></article>
+          <article class="form-card"><div class="card-heading"><span class="card-icon">☑</span><div><h2>Keperluan Surat</h2><p>Jelaskan secara singkat dan jelas tujuan pengajuan surat.</p></div></div><label>Keperluan<textarea name="purpose" required minlength="10" maxlength="500" rows="6" placeholder="Jelaskan keperluan pengajuan surat..."></textarea><span class="char-count"><small>Hindari menuliskan data sensitif yang tidak diperlukan.</small><b id="purpose-count">0/500 karakter</b></span></label></article>
+        </section>
+
+        <section class="step-panel" data-step="3" aria-labelledby="step-three-title" hidden>
+          <article class="form-card"><div class="card-heading"><span class="card-icon">⌁</span><div><h2 id="step-three-title">Dokumen Pendukung</h2><p>Unggah dokumen pendukung jika diperlukan.</p></div></div><label class="upload-zone" id="upload-zone"><input id="supporting-file" name="supportingFile" type="file" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"><span class="upload-cloud">⇧</span><b id="upload-title">Seret file ke sini atau <em>pilih file</em></b><small id="upload-hint">PDF, JPG, PNG · Maksimal 5 MB</small></label><p class="upload-note">Dokumen dapat berupa bukti atau berkas yang dibutuhkan untuk memproses surat. Jangan unggah dokumen yang tidak relevan.</p></article>
+          <article class="privacy-card"><span>▣</span><p><b>Keamanan dokumen</b><br>Dokumen disimpan secara privat di server sekolah dan digunakan untuk proses administrasi. Hindari mengunggah berkas yang tidak relevan.</p></article>
+        </section>
+
+        <section class="step-panel" data-step="4" aria-labelledby="step-four-title" hidden>
+          <article class="form-card"><div class="card-heading"><span class="card-icon">✓</span><div><h2 id="step-four-title">Periksa Pengajuan</h2><p>Pastikan informasi yang Anda masukkan sudah benar.</p></div></div><dl class="summary-list" id="summary-list"></dl></article>
+          <label class="consent"><input type="checkbox" id="confirm-accuracy" required><span>Saya memastikan data yang diisi benar dan dapat dipertanggungjawabkan.</span></label>
+        </section>
+      </form>
+      <p class="form-alert" id="form-alert" role="alert"></p>
+      <aside class="duplicate-notice" id="duplicate-notice" role="status" aria-live="polite" hidden>
+        <b>Pengajuan sebelumnya masih diproses</b>
+        <p id="duplicate-message"></p>
+        <div id="duplicate-tracking" hidden><span>Nomor pelacakan</span><strong id="duplicate-code"></strong><p id="duplicate-status"></p><a id="duplicate-link" class="btn btn-light">Lacak pengajuan sebelumnya →</a></div>
+      </aside>
+    </div>
+    <footer class="action-bar"><p><span>▣</span> Data Anda hanya digunakan untuk proses administrasi sekolah.</p><div><button class="btn btn-light" id="save-draft" type="button"><span>▣</span> Simpan sebagai draft</button><button class="btn btn-light previous-btn" id="previous-step" type="button" hidden>← Kembali</button><button class="btn btn-primary" id="next-step" type="button">Lanjutkan <span>→</span></button><button class="btn btn-primary" id="submit-request" type="button" hidden>Kirim Pengajuan <span>→</span></button></div></footer>
+  </main>
+  <dialog class="success-dialog" id="success-dialog"><span class="success-check">✓</span><p class="overline">PENGAJUAN TERCATAT</p><h2>Pengajuan berhasil dikirim</h2><p>Simpan nomor pelacakan ini untuk memantau status surat Anda.</p><strong id="tracking-code"></strong><button class="btn btn-light" id="copy-tracking" type="button">Salin nomor</button><a class="btn btn-primary" href="index.html#lacak">Lacak Surat</a></dialog>
+  <script src="pengajuan.js?v=20261022-home-track1"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+kind: wasmer.io/App.v0
+name: layanansuratdigitalsmkamanah
+app_id: da_KE4I8tXUNb5q
+owner: alghifari1235
+package: .
+env:
+  AMANA_ENV: production
+  AMANA_BACKEND: supabase
+  AMANA_DASHBOARD_BATCH: "1"
+  AMANA_MIGRATING: "0"
+  AMANA_DATA_DIR: /data/uploads
+  AMANA_BACKUP_DIR: /data/backups
+capabilities:
+  database:
+    engine: mysql
+volumes:
+- name: surat-files
+  mount: /data
+scaling:
+  mode: single_concurrency
+jobs:
+- name: backup-school-every-day
+  trigger: 24h
+  action:
+    execute:
+      command: backup
+- name: backup-school-after-deploy
+  trigger: post-deployment
+  action:
+    execute:
+      command: backup

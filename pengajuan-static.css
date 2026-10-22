@@ -1,0 +1,48 @@
+/* Keep the application form on a stable, untransformed rendering surface. */
+body.application-page{animation:none;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;text-rendering:auto;-webkit-font-smoothing:auto;-moz-osx-font-smoothing:auto}
+.application-page :is(.page-heading h1,.card-heading h2,.side-brand strong,.success-dialog h2){font-family:inherit;text-rendering:auto}
+.application-page :is(.sidebar,.workspace,.success-dialog),
+.application-page :is(.sidebar,.workspace,.success-dialog) *{animation:none!important;transform:none!important;translate:none!important;scale:none!important;rotate:none!important;perspective:none!important;filter:none!important;backdrop-filter:none!important;will-change:auto!important;transition:none!important;text-shadow:none!important}
+.application-page :is(.sidebar,.workspace,.success-dialog) *::before,
+.application-page :is(.sidebar,.workspace,.success-dialog) *::after{animation:none!important;transform:none!important;filter:none!important;backdrop-filter:none!important;transition:none!important}
+.application-page :is(input,select,textarea,button){font-family:inherit;text-rendering:auto;-webkit-font-smoothing:auto}
+.application-page :is(input:not([type=checkbox]):not([type=file]),select,textarea){font-size:14px;color:#18375d}
+.application-page :is(.card-heading p,.form-card label small,.upload-note,.optional){color:#526b87}
+.application-page :is(.page-heading,.step-panel,.form-card,.privacy-card,.consent,.action-bar,.success-dialog){opacity:1}
+.application-page :is(.form-card,.privacy-card,.consent):is(:hover,:focus-within){box-shadow:0 4px 18px #193e6006;opacity:1}
+.application-page .action-bar{background:#fff}
+.application-page .success-dialog::backdrop{animation:none;backdrop-filter:none;background:#102e5380}
+.application-page :is(input,select,textarea):hover{border-color:#a9c3e5}
+.application-page :is(input,select,textarea):focus{background:#fff;border-color:#477de0;box-shadow:0 0 0 2px #245ce310}
+.application-page .btn-primary:hover:not(:disabled){background:#174fcb}
+.application-page .btn-light:hover:not(:disabled){background:#f0f5fd;border-color:#a9c3e5}
+.application-page .side-nav a:hover{background-color:#ffffff12}
+.application-page :is(a,button,input,select,textarea):focus-visible{outline:3px solid #d8a52f;outline-offset:3px}
+
+/* The request form uses the full viewport, with tracking at the start and after submission. */
+.application-page .workspace{margin-left:0;width:100%;min-height:100vh;padding-bottom:100px}
+.application-page .application-header{min-height:84px;padding:14px clamp(16px,4vw,64px);display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border-bottom:1px solid #dce6f1}
+.application-page .application-brand{display:flex;align-items:center;gap:10px;color:#123456;text-decoration:none;min-width:0}
+.application-page .application-brand .school-logo{width:52px;height:52px}
+.application-page .application-brand>span:last-child{display:grid;gap:4px}
+.application-page .application-brand strong{font-size:17px;font-weight:800}
+.application-page .application-brand small{font-size:10px;letter-spacing:.14em;color:#617997}
+.application-page .page-content{max-width:none;width:100%;margin:0;padding:28px clamp(16px,4vw,64px) 36px}
+.application-page .step-panel[data-step]{max-width:none;margin:0}
+.application-page .action-bar{left:0;padding:12px clamp(16px,4vw,64px)}
+.application-page .success-dialog>strong{font-size:clamp(13px,2.7vw,18px);letter-spacing:.02em;overflow-wrap:anywhere}
+.application-page .success-dialog a.btn-primary{color:#fff}
+@media(max-width:760px){
+  .application-page .workspace{padding-bottom:156px}
+  .application-page .application-header{min-height:72px;padding:10px 16px;gap:10px}
+  .application-page .application-brand .school-logo{width:42px;height:44px}
+  .application-page .application-brand strong{font-size:14px}
+  .application-page .application-brand small{font-size:9px;letter-spacing:.08em}
+  .application-page .application-header .btn{padding:0 12px;white-space:nowrap;font-size:12px}
+  .application-page .page-content{padding:22px 16px 28px}
+  .application-page .action-bar{padding:10px 16px}
+  .application-page .action-bar>p{display:none}
+  .application-page .action-bar>div{width:100%;flex-wrap:wrap;gap:8px}
+  .application-page #save-draft{flex-basis:100%}
+  .application-page :is(#next-step,#submit-request){margin-left:auto}
+}

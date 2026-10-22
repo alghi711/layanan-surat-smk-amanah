@@ -1,0 +1,35 @@
+/* Original school logo, shared across the public portal and staff pages. */
+.school-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 64px;
+  flex: none;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.school-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.2);
+  filter: drop-shadow(0 2px 2px #102e5318);
+}
+.school-logo--footer { width: 38px; height: 36px; border-radius: 7px; }
+.school-logo--login { width: 64px; height: 60px; }
+.side-brand { padding-right: 6px; padding-left: 6px; gap: 10px; }
+.side-brand .school-logo { width: 50px; height: 50px; border-radius: 9px; }
+.side-brand strong { font-size: 16px; }
+@media (max-width: 1050px) {
+  .side-brand { gap: 8px; }
+  .side-brand .school-logo { width: 42px; height: 44px; }
+  .side-brand strong { font-size: 14px; }
+}
+@media (max-width: 700px) {
+  .brand .school-logo { width: 54px; height: 52px; border-radius: 9px; }
+  .brand .school-logo--login { width: 60px; height: 56px; }
+}

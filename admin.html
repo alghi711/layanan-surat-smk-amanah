@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef6fd">
+  <title>Login Petugas — SMK Amanah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css?v=20261020-login2">
+  <link rel="stylesheet" href="branding.css">
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="admin-static.css?v=20261020-login2">
+  <script>try{if(sessionStorage.getItem('amanah_brand_intro_v2'))document.documentElement.classList.add('school-intro-skip');else sessionStorage.setItem('amanah_brand_intro_v2','1')}catch(e){}</script>
+  <link rel="stylesheet" href="site-loader.css?v=20261019-2">
+  <link rel="preload" as="image" href="assets/logo-smk-amanah.png">
+  <script src="site-loader.js?v=20261019-2" defer></script>
+</head>
+<body class="admin-page">
+  <div class="school-intro" aria-hidden="true">
+    <div class="school-intro-inner">
+      <span class="school-intro-kicker">Selamat datang di</span>
+      <div class="school-intro-mark"><img src="assets/logo-smk-amanah.png" alt="" width="202" height="202" loading="eager" fetchpriority="high"></div>
+      <p class="school-intro-title">SMK AMANAH</p>
+      <p class="school-intro-subtitle">PORTAL LAYANAN SURAT</p>
+      <div class="school-intro-track"></div>
+      <p class="school-intro-caption">Pelayanan mudah, proses transparan.</p>
+    </div>
+  </div>
+  <main class="admin-shell">
+    <a class="back-link" href="index.html">← Kembali ke beranda</a>
+    <section class="login-card">
+      <a class="brand" href="index.html" aria-label="SMK Amanah"><span class="school-logo school-logo--login"><img src="assets/logo-smk-amanah.png" alt="Logo SMK Amanah" width="68" height="64"></span><span><b>SMK AMANAH</b><small>PORTAL LAYANAN SURAT</small></span></a>
+      <span class="eyebrow">AREA PETUGAS</span>
+      <h1>Login Petugas</h1>
+      <p class="intro" id="login-intro">Masuk dengan akun TU atau Kepala Sekolah. Dashboard terbuka sesuai tugas akun Anda.</p>
+      <section id="active-session" class="hidden" aria-label="Akun yang sedang masuk">
+        <p id="active-account"></p>
+        <a class="login-button" href="tu.html" style="display:grid;place-items:center;text-decoration:none">Lanjutkan ke dashboard</a>
+        <button class="logout-button" id="switch-account" type="button">Ganti akun TU / Kepala Sekolah</button>
+        <p id="switch-error" class="login-error" role="alert"></p>
+      </section>
+      <form class="login-form" id="login-form">
+        <label>Username<input name="username" autocomplete="username" required placeholder="Masukkan username"></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" required placeholder="Masukkan password"></label>
+        <p class="login-error" id="login-error" role="alert"></p>
+        <button class="login-button" type="submit">Masuk <span>→</span></button>
+      </form>
+<p class="prototype-note"><b>Akses petugas sekolah</b><br>Gunakan akun resmi yang diberikan administrator sekolah. Jangan bagikan kata sandi kepada orang lain.</p>
+    </section>
+    <footer>SMK Amanah · Layanan Surat</footer>
+  </main>
+  <script src="admin.js?v=20261022-switch-account2"></script>
+</body>
+</html>

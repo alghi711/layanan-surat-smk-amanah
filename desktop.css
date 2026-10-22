@@ -1,0 +1,61 @@
+/* Wider layout for laptop and desktop screens; mobile rules remain in styles.css. */
+@media (min-width: 1000px) {
+  body { padding: 26px 24px; }
+  .site-wrap { width: min(100%, 1280px); border-radius: 18px; }
+  .ribbon { border-radius: 18px 18px 0 0; }
+  .site-header { height: 104px; padding: 0 64px; }
+  .nav-links { gap: 32px; }
+  .nav-links > a { font-size: 15px; }
+  .nav-cta { padding: 14px 20px; }
+
+  .hero { min-height: 610px; padding: 74px 64px 0; }
+  .hero-copy { max-width: 540px; }
+  .hero h1 { font-size: clamp(58px, 5.4vw, 74px); margin-top: 25px; }
+  .hero-copy > p { font-size: 20px; max-width: 455px; margin: 19px 0 24px; }
+  .hero-actions { display: flex; gap: 13px; max-width: none; }
+  .hero-actions .button { min-width: 220px; padding: 0 24px; }
+  .trust { margin-top: 22px; font-size: 16px; }
+  .hero-art { left: auto; width: 58%; height: 100%; }
+  .sun-orb { width: 770px; height: 400px; bottom: -132px; }
+  .school { width: min(100%, 820px); bottom: 6px; }
+  .cloud-a { left: 2%; top: 37%; }
+  .cloud-b { right: 6%; top: 29%; }
+  .status-float { right: 10%; top: 23%; padding: 14px 18px; font-size: 15px; }
+  .status-float span { width: 32px; height: 32px; }
+
+  .section-pad { padding: 58px 64px 52px; }
+  .section-pad h2 { font-size: 39px; margin-bottom: 25px; }
+  .eyebrow { font-size: 14px; }
+  .services { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(370px, .85fr); column-gap: 38px; align-items: start; }
+  .services > .eyebrow, .services > h2 { grid-column: 1 / -1; }
+  .services > h2 { margin-bottom: 26px; }
+  .service-list { grid-column: 1; gap: 14px; }
+  .service-card { min-height: 112px; padding: 17px 21px; gap: 20px; }
+  .service-icon { width: 72px; height: 72px; }
+  .service-text b { font-size: 18px; }
+  .service-text small { font-size: 15px; }
+  .track-card { grid-column: 2; grid-row: 3; margin: 0; padding: 25px; position: sticky; top: 24px; }
+  .track-heading h3 { font-size: 22px; }
+  .track-heading p { font-size: 15px; line-height: 1.5; }
+  .track-row { grid-template-columns: 1fr; gap: 11px; margin-top: 20px; }
+  .track-row input, .track-row button { height: 50px; }
+
+  .steps { padding-top: 55px; padding-bottom: 58px; }
+  .steps > h2 { margin-bottom: 28px; }
+  .step-grid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .step-grid article { min-height: 176px; padding: 20px; }
+  .step-grid article > span { width: 40px; height: 40px; margin-bottom: 17px; }
+  .step-grid b { font-size: 16px; }
+  .step-grid p { font-size: 14px; }
+  footer { padding: 25px 64px; }
+}
+
+@media (min-width: 1000px) and (max-width: 1150px) {
+  .site-header { padding: 0 42px; }
+  .hero { padding-left: 48px; }
+  .hero-copy { max-width: 485px; }
+  .hero-art { width: 54%; }
+  .section-pad { padding-left: 48px; padding-right: 48px; }
+  .nav-links { gap: 19px; }
+}
+.admin-link{color:#58708d;text-decoration:none;font-size:12px;font-weight:700}.admin-link:hover{color:#245be9}

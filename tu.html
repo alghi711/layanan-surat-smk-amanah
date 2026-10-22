@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eff6fd">
+  <title>Dashboard Tata Usaha — SMK Amanah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tu.css?v=20261022-top-logout2">
+  <link rel="stylesheet" href="motion.css?v=20261020-hover1">
+  <link rel="stylesheet" href="branding.css">
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="backup.css">
+  <link rel="stylesheet" href="whatsapp.css?v=20261019-2">
+  <link rel="stylesheet" href="letter-composer.css?v=20261020-draft1">
+  <link rel="stylesheet" href="principal-signing.css?v=20261020-1">
+  <script>try{if(sessionStorage.getItem('amanah_brand_intro_v2'))document.documentElement.classList.add('school-intro-skip');else sessionStorage.setItem('amanah_brand_intro_v2','1')}catch(e){}</script>
+  <link rel="stylesheet" href="site-loader.css?v=20261019-2">
+  <link rel="preload" as="image" href="assets/logo-smk-amanah.png">
+  <script src="site-loader.js?v=20261019-2" defer></script>
+</head>
+<body>
+  <div class="school-intro" aria-hidden="true">
+    <div class="school-intro-inner">
+      <span class="school-intro-kicker">Selamat datang di</span>
+      <div class="school-intro-mark"><img src="assets/logo-smk-amanah.png" alt="" width="202" height="202" loading="eager" fetchpriority="high"></div>
+      <p class="school-intro-title">SMK AMANAH</p>
+      <p class="school-intro-subtitle">PORTAL LAYANAN SURAT</p>
+      <div class="school-intro-track"></div>
+      <p class="school-intro-caption">Pelayanan mudah, proses transparan.</p>
+    </div>
+  </div>
+  <aside class="sidebar"><a class="side-brand" href="index.html"><span class="school-logo"><img src="assets/logo-smk-amanah.png" alt="Logo SMK Amanah" width="68" height="64"></span><span><strong>SMK AMANAH</strong><small>LAYANAN SURAT</small></span></a><nav class="side-nav"><details class="side-group" open><summary><span>▤</span>Menu Petugas <b class="menu-chevron">⌄</b></summary><div class="side-submenu"><a href="#" class="active" data-mode="tu"><span>•</span>Tata Usaha <i id="nav-pending">0</i></a><a href="#" data-mode="principal"><span>•</span>Kepala Sekolah <i id="nav-principal">0</i></a></div></details><a href="pengajuan.html" data-tu-only><span aria-hidden="true">＋</span>Ajukan Surat</a><a href="rekap.html"><span aria-hidden="true">▥</span>Rekap laporan</a><a href="#backup-dialog" id="open-backups" data-open-backups><span>▣</span>Backup data</a><a href="index.html"><span>⌂</span>Portal Orang Tua</a><a href="admin.html?switch=1"><span aria-hidden="true">&#8644;</span>Ganti akun</a></nav></aside>
+  <main class="workspace">
+    <header class="topbar"><div class="breadcrumbs"><a href="index.html">Portal</a><i>/</i><b>Dashboard Tata Usaha</b></div><div class="top-user"><span class="live-dot"></span> Layanan aktif <button class="top-logout" id="logout-button" type="button"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3H4v18h9M4 3l6 2v14l-6 2M14 12h7m-3-3 3 3-3 3"/><circle cx="8" cy="12" r=".7" fill="currentColor" stroke="none"/></svg><span class="logout-label">Logout</span></button></div></header>
+    <section class="content">
+      <div class="page-heading"><div><span class="overline">RUANG KERJA PETUGAS</span><h1 id="page-title">Menu Tata Usaha</h1><p id="page-description">Periksa pengajuan, buat surat, lalu teruskan untuk persetujuan kepala sekolah.</p></div><div class="dashboard-tools"><a class="refresh-button report-link" href="rekap.html">Rekap laporan</a><button class="refresh-button" type="button" data-open-backups>Backup data</button><button class="refresh-button" id="refresh-button">↻ &nbsp; Muat ulang</button></div></div>
+      <div class="prototype-banner"><b>Sinkronisasi pengajuan</b><span id="sync-status" role="status" aria-live="polite">Menghubungkan ke data terbaru…</span><a href="index.html#alur">Lihat alur layanan</a></div>
+      <div class="stats-grid"><article class="stat-card"><span class="stat-icon blue">☷</span><div><small>Total pengajuan</small><b id="total-count">0</b></div></article><article class="stat-card"><span class="stat-icon orange">◷</span><div><small>Perlu diperiksa</small><b id="review-count">0</b></div></article><article class="stat-card"><span class="stat-icon green">✓</span><div><small>Disetujui TU</small><b id="approved-count">0</b></div></article><article class="stat-card"><span class="stat-icon violet">▤</span><div><small>Menunggu kepala sekolah</small><b id="principal-count">0</b></div></article></div>
+      <div class="work-grid">
+        <section class="list-panel" id="application-list"><header class="panel-heading"><div><h2 id="list-title">Pengajuan masuk</h2><p id="list-description">Periksa data yang dikirim oleh orang tua/wali.</p></div><span class="total-badge" id="visible-count">0 pengajuan</span></header><div class="list-tools"><label class="search-box"><span>⌕</span><input id="search-input" placeholder="Cari nomor, nama siswa, atau jenis surat..."></label><select id="status-filter" aria-label="Filter status"><option value="all">Semua status</option><option value="Menunggu konfirmasi TU">Perlu diperiksa</option><option value="Disetujui Tata Usaha">Disetujui TU</option><option value="Ditolak oleh TU">Ditolak</option><option value="Menunggu persetujuan Kepala Sekolah">Menunggu kepala sekolah</option><option value="Selesai">Selesai</option><option value="Ditolak Kepala Sekolah">Ditolak kepala sekolah</option></select></div><div class="table-scroll"><table><thead><tr><th>NOMOR</th><th>PEMOHON / SISWA</th><th>JENIS SURAT</th><th>TANGGAL</th><th>STATUS</th></tr></thead><tbody id="application-rows"></tbody></table></div><div class="empty-list hidden" id="empty-list"><span>▤</span><b>Belum ada pengajuan</b><p>Pengajuan baru akan muncul di sini setelah orang tua mengirim formulir.</p></div></section>
+        <aside class="detail-panel" id="detail-panel"><div class="detail-empty"><span>☷</span><h2>Pilih pengajuan</h2><p>Pilih baris pengajuan untuk memeriksa detail dan mengambil tindakan.</p></div><div class="detail-body hidden" id="detail-body"><header class="detail-heading"><div><span class="overline">DETAIL PENGAJUAN</span><h2 id="detail-type">—</h2><p id="detail-code">—</p></div><button id="close-detail" aria-label="Tutup detail">×</button></header><div class="status-line"><span id="detail-status" class="status-badge">—</span><time id="detail-date">—</time></div><section class="detail-section"><h3>Data pemohon</h3><dl><div><dt>Nama orang tua/wali</dt><dd id="detail-parent">—</dd></div><div><dt>WhatsApp</dt><dd id="detail-phone">—</dd></div><div><dt>Email</dt><dd id="detail-email">—</dd></div><div><dt>Hubungan</dt><dd id="detail-relation">—</dd></div></dl></section><section class="detail-section"><h3>Data siswa</h3><dl><div><dt>Nama siswa</dt><dd id="detail-student">—</dd></div><div><dt>NIS / NISN</dt><dd id="detail-nis">—</dd></div><div><dt>Kelas / jurusan</dt><dd id="detail-class">—</dd></div></dl></section><section class="detail-section"><h3>Keperluan surat</h3><p class="purpose-box" id="detail-purpose">—</p></section><section class="detail-section"><h3>Dokumen pendukung</h3><a class="file-link hidden" id="supporting-link" target="_blank" rel="noopener">▤ <span id="supporting-name"></span> <b>Buka</b></a><p class="no-file" id="no-supporting">Tidak ada dokumen pendukung.</p><a class="file-link hidden" id="letter-link" target="_blank" rel="noopener">▤ <span id="letter-name"></span> <b>Lihat surat</b></a></section><section class="parent-contact" aria-labelledby="contact-parent-title"><h3 id="contact-parent-title">Kabari orang tua</h3><p>Siapkan pesan status surat beserta tautan pelacakan untuk pemohon.</p><button type="button" id="contact-parent" disabled>Siapkan pesan WhatsApp</button><p class="contact-error" id="contact-phone-error" hidden></p></section><section class="seal-launch" id="seal-launch" hidden><p>Tempatkan tanda tangan dan stempel pada surat sebelum menyetujui dan menerbitkannya.</p><button type="button" id="open-seal">Tanda tangan &amp; stempel</button></section><section class="decision-section"><label for="tu-note">Catatan untuk orang tua <span>(wajib jika menolak)</span></label><textarea id="tu-note" maxlength="500" rows="3" placeholder="Tulis catatan atau alasan keputusan..."></textarea><div class="decision-actions"><button class="reject-button" id="reject-button">Tolak</button><button class="approve-button" id="approve-button">Setujui pengajuan</button></div><div class="letter-upload hidden" id="letter-upload"><div class="letter-template-launch" id="letter-template-launch" hidden><p>Buat berbagai jenis surat dengan kop sekolah. Isi judul, data, dan isi surat melalui editor.</p><button type="button" id="letter-create">Buat surat</button></div><label for="letter-file">Unggah surat yang sudah dibuat (PDF/JPG/PNG, maks. 10 MB)</label><input type="file" id="letter-file" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"><button class="send-principal-button" id="send-principal">Kirim ke kepala sekolah</button></div></section><p class="action-message" id="action-message" role="status"></p></div></aside>
+      </div>
+      <footer class="page-foot">SMK Amanah · Dashboard Tata Usaha <span>Pengajuan tersimpan di sistem sekolah</span></footer>
+    </section>
+  </main>
+  <dialog class="backup-dialog" id="backup-dialog" aria-labelledby="backup-title">
+    <div class="backup-header"><div><span class="overline">CADANGAN DATA SEKOLAH</span><h2 id="backup-title">Backup data</h2></div><button type="button" id="close-backups" aria-label="Tutup backup">×</button></div>
+    <p class="backup-intro">Simpan salinan pengajuan, riwayat proses, dokumen pendukung, dan surat. <span id="backup-schedule">Backup otomatis dijadwalkan setiap 24 jam.</span></p>
+    <button type="button" class="backup-create" id="create-backup">Buat backup sekarang</button>
+    <p class="backup-message" id="backup-message" role="status" aria-live="polite"></p>
+    <div class="backup-list" id="backup-list"></div>
+    <p class="backup-note">Unduh dan simpan salinan di tempat terpisah dari hosting. Arsip berisi data pribadi; simpan hanya untuk petugas yang berwenang.</p>
+  </dialog>
+  <dialog class="wa-dialog" id="wa-dialog" aria-labelledby="wa-title" aria-describedby="wa-helper">
+    <div class="wa-dialog-heading"><div><span class="overline">KABAR UNTUK ORANG TUA</span><h2 id="wa-title">Tinjau pesan WhatsApp</h2></div><button type="button" id="wa-close" aria-label="Tutup pratinjau pesan">×</button></div>
+    <div class="wa-recipient"><b id="wa-parent"></b><small id="wa-status"></small></div>
+    <label class="wa-phone-label" for="wa-phone">Nomor WhatsApp tujuan</label>
+    <input type="tel" id="wa-phone" maxlength="24" autocomplete="tel" placeholder="Contoh: 0812 3456 7890" aria-describedby="wa-phone-error wa-phone-note">
+    <p class="wa-phone-error" id="wa-phone-error" hidden>Masukkan nomor WhatsApp yang valid, misalnya 0812 3456 7890.</p>
+    <p class="wa-phone-note" id="wa-phone-note">Periksa kembali penerima. Perubahan nomor hanya digunakan untuk pesan ini.</p>
+    <label class="wa-label" for="wa-message">Isi pesan <span>(boleh disesuaikan)</span></label>
+    <textarea id="wa-message" rows="11" maxlength="4000"></textarea>
+    <p class="wa-helper" id="wa-helper">Periksa nomor penerima dan isi pesan, lalu kirim melalui WhatsApp. Tautan pelacakan memberi akses ke pengajuan terkait; bagikan hanya kepada pemohon.</p>
+    <p class="wa-feedback" id="wa-feedback" role="status" aria-live="polite"></p>
+    <div class="wa-actions"><button type="button" class="wa-rebuild" id="wa-rebuild" hidden>Buat ulang pesan</button><a class="wa-continue" id="wa-continue" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Lanjut ke WhatsApp ↗</a></div>
+  </dialog>
+  <dialog class="letter-composer" id="letter-composer" aria-labelledby="letter-composer-title">
+    <header><div><span class="overline">TEMPLATE SURAT SEKOLAH</span><h2 id="letter-composer-title">Buat surat sekolah</h2><p>Lengkapi data, periksa pratinjau, lalu teruskan untuk persetujuan.</p></div><button type="button" class="letter-close" id="letter-close" aria-label="Tutup editor surat">×</button></header>
+    <div class="letter-composer-grid">
+      <section class="letter-editor" aria-label="Isian surat"><div class="letter-student"><b id="letter-student-name"></b><span id="letter-student-meta"></span></div>
+        <form id="letter-editor-form"><fieldset style="border:0;padding:0;margin:0;min-width:0"><legend class="overline" style="margin-bottom:15px">DATA SURAT</legend><div class="letter-form-grid">
+          <p class="wide letter-template-note" style="margin:0">Kop surat dan garis tepi menggunakan format sekolah dari contoh. Alamat dan kontak sudah tercantum pada kop.</p>
+          <label class="wide">Judul surat *<input name="title" maxlength="140" required placeholder="Contoh: Surat Pengantar / Surat Rekomendasi"></label>
+          <label class="wide">Nomor surat *<input name="number" maxlength="70" required placeholder="Isi sesuai penomoran sekolah" autocomplete="off"></label>
+          <label class="wide">Tujuan / penerima (opsional)<textarea name="recipient" rows="2" maxlength="300" placeholder="Yth. ...&#10;di ..."></textarea></label>
+          <label class="wide">Kalimat pembuka *<textarea name="opening" rows="2" maxlength="500" required placeholder="Isi kalimat pembuka surat"></textarea></label>
+          <label class="wide letter-student-toggle"><input name="includeStudent" type="checkbox" checked><span>Sertakan tabel identitas siswa</span></label>
+          <div class="wide letter-student-fields" id="letter-student-fields">
+            <label class="wide">Nama siswa *<input name="studentName" maxlength="80" required></label>
+            <label>NIS / NISN *<input name="studentId" maxlength="20" required></label>
+            <label>Kelas / jurusan *<input name="studentClass" maxlength="50" required></label>
+            <label class="wide">Tahun pelajaran (opsional)<input name="year" maxlength="20" placeholder="Contoh: 2026/2027"></label>
+          </div>
+          <label class="wide">Isi surat *<textarea name="body" rows="7" maxlength="2500" required placeholder="Tulis isi surat. Gunakan Enter untuk paragraf baru."></textarea></label>
+          <label class="wide">Kalimat penutup *<textarea name="closing" rows="2" maxlength="500" required></textarea></label>
+          <label>Tempat terbit *<input name="city" maxlength="45" required placeholder="Kota / kabupaten"></label>
+          <label>Tanggal surat *<input name="date" type="date" required></label>
+          <label class="wide">Jabatan penandatangan *<input name="position" maxlength="100" required placeholder="Contoh: Kepala SMK Amanah"></label>
+          <label class="wide">Kepala sekolah (tetap)<input name="principal" maxlength="90" required readonly value="MARTIN EKA SUPIANTI., S.T."></label>
+          <label class="wide">NIP (opsional)<input name="nip" maxlength="30" placeholder="Kosongkan jika tidak digunakan"></label>
+        </div></fieldset></form>
+        <p class="letter-template-note">* Wajib diisi. Identitas terisi dari pengajuan dan boleh disesuaikan untuk surat ini. Perubahan tidak mengubah data pengajuan. Format satu halaman A4; ringkas isi jika terlalu panjang. Tanda tangan dan stempel tidak dibuat otomatis. Klik Simpan draf agar isian dapat dilanjutkan dari perangkat lain.</p>
+      </section>
+      <section class="letter-preview-panel" aria-label="Pratinjau surat"><p class="letter-preview-label">PRATINJAU A4 · BELUM DISETUJUI KEPSEK</p><div class="letter-preview-page"><p id="letter-preview-placeholder">Lengkapi data surat lalu klik Buat pratinjau.</p><img id="letter-preview-image" alt="Pratinjau surat sekolah" hidden></div></section>
+    </div>
+    <footer><div class="letter-draft-bar"><p id="letter-draft-status" role="status" aria-live="polite">Belum disimpan ke database.</p><button type="button" id="letter-load-draft">Muat draf terbaru</button></div><p class="letter-composer-message" id="letter-composer-message" role="status" aria-live="polite"></p><label class="letter-review"><input type="checkbox" id="letter-review" disabled><span>Saya sudah memeriksa nomor surat, identitas siswa, isi, dan penandatangan pada pratinjau.</span></label><div class="letter-composer-actions"><button type="button" id="letter-save-draft">Simpan draf</button><button type="button" id="letter-build">Buat pratinjau</button><button type="button" id="letter-download" disabled>Unduh draf PDF</button><button type="button" class="letter-primary" id="letter-submit" disabled>Kirim ke kepala sekolah →</button></div></footer>
+  </dialog>
+  <dialog class="seal-dialog" id="seal-dialog" aria-labelledby="seal-title">
+    <header class="seal-header"><div><span class="overline">PENGESAHAN KEPALA SEKOLAH</span><h2 id="seal-title">Tanda tangan &amp; stempel</h2><p id="seal-request"></p></div><button type="button" class="seal-close" id="seal-close" aria-label="Tutup pengesahan">×</button></header>
+    <div class="seal-grid"><aside class="seal-controls"><p class="seal-identity">Kepala SMK Amanah<b id="seal-principal-name">MARTIN EKA SUPIANTI., S.T.</b></p><h3>Pilih aset yang diatur</h3><div class="seal-selectors"><button type="button" data-seal-kind="signature" data-seal-edit aria-pressed="true">Tanda tangan</button><button type="button" data-seal-kind="stamp" data-seal-edit aria-pressed="false">Stempel</button></div><label>Halaman penempatan<select id="seal-target-page" data-seal-edit></select></label><label>Posisi horizontal <output id="seal-x-value">0%</output><input type="range" id="seal-x" min="0" max="100" step="0.1" data-seal-edit></label><label>Posisi vertikal <output id="seal-y-value">0%</output><input type="range" id="seal-y" min="0" max="100" step="0.1" data-seal-edit></label><label>Lebar aset <output id="seal-width-value">20%</output><input type="range" id="seal-width" min="4" max="75" step="0.1" data-seal-edit></label><button type="button" class="seal-secondary" id="seal-reset" data-seal-edit>Reset posisi aset terpilih</button><p class="seal-hint">Geser aset di atas surat atau gunakan pengaturan posisi. Untuk keyboard, fokuskan aset lalu gunakan tombol panah. Tanda tangan dan stempel dapat ditempatkan di halaman yang berbeda.</p></aside>
+    <section class="seal-workspace" aria-label="Halaman surat"><div class="seal-page-nav"><span id="seal-page-count">Memuat surat…</span><div><select id="seal-zoom" aria-label="Ukuran pratinjau"><option value="page">Pas halaman</option><option value="width">Lebar area</option></select><button type="button" id="seal-prev" aria-label="Halaman sebelumnya">←</button><select id="seal-page" aria-label="Halaman yang ditampilkan"></select><button type="button" id="seal-next" aria-label="Halaman berikutnya">→</button></div></div><div class="seal-loading" id="seal-loading">Memuat surat…</div><div class="seal-sheet" id="seal-sheet" hidden><canvas id="seal-canvas" aria-label="Pratinjau halaman surat"></canvas><div class="seal-layer" data-kind="stamp" tabindex="0" role="button"><img alt="Stempel sekolah" draggable="false"></div><div class="seal-layer" data-kind="signature" tabindex="0" role="button"><img alt="Tanda tangan kepala sekolah" draggable="false"></div></div></section></div>
+    <footer class="seal-footer"><p class="seal-message" id="seal-message" role="status" aria-live="polite"></p><label class="seal-review"><input type="checkbox" id="seal-review" disabled><span>Saya telah memeriksa surat serta posisi tanda tangan dan stempel pada pratinjau hasil, dan menyetujui penerbitannya.</span></label><div class="seal-actions"><button type="button" id="seal-retry" hidden>Muat ulang pratinjau</button><button type="button" id="seal-edit" disabled>Ubah posisi</button><button type="button" id="seal-build" disabled>Pratinjau hasil</button><button type="button" class="seal-primary" id="seal-publish" disabled>Setujui &amp; terbitkan surat</button></div></footer>
+  </dialog>
+  <script src="school-settings.js?v=20261020-1"></script>
+  <script src="principal-pdf.js?v=20261020-1"></script>
+  <script src="principal-signing.js?v=20261020-firefox3"></script>
+  <script src="letter-pdf.js?v=20261020-seal1"></script>
+  <script src="letter-composer.js?v=20261020-seal1"></script>
+  <script src="tu.js?v=20261022-top-logout2"></script>
+  <script src="backup.js"></script>
+  <script src="motion.js"></script>
+</body>
+</html>

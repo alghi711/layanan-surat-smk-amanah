@@ -1,0 +1,30 @@
+[package]
+entrypoint = "serve"
+version = "0.1.0"
+description = "Portal Layanan Surat SMK Amanah"
+readme = "./README.md"
+
+[dependencies]
+"php/php" = "*"
+
+[fs]
+"/app" = "./app"
+"/config" = "./config"
+
+[[command]]
+name = "serve"
+module = "php/php:php"
+runner = "wasi"
+
+[command.annotations.wasi]
+main-args = ["-c", "/config/php.ini", "-t", "/app", "-S", "localhost:8080", "/app/router.php"]
+env = ["PHPRC=/config/php.ini"]
+
+[[command]]
+name = "backup"
+module = "php/php:php"
+runner = "wasi"
+
+[command.annotations.wasi]
+main-args = ["-c", "/config/php.ini", "/app/backup-cli.php"]
+env = ["PHPRC=/config/php.ini"]

@@ -1,0 +1,21 @@
+/* Keep staff login text on the normal page surface, including during hover. */
+body.admin-page{animation:none}
+.admin-page .admin-shell,
+.admin-page .login-card,
+.admin-page .role-options,
+.admin-page .role-card,
+.admin-page .role-card > *,
+.admin-page .role-card b,
+.admin-page .role-card small,
+.admin-page .login-button,
+.admin-page .logout-button{animation:none!important;transform:none!important;filter:none!important;backdrop-filter:none!important;will-change:auto!important;opacity:1}
+.admin-page .login-card{transition:none}
+.admin-page .role-card{transition:background-color .15s ease,border-color .15s ease;box-shadow:none}
+.admin-page .role-card:hover,
+.admin-page .role-card:focus-visible{background-color:#f3f7ff;border-color:#8db4f3;box-shadow:none}
+.admin-page .role-card:active{background-color:#eaf2ff;box-shadow:none}
+.admin-page .role-card > *{transition:none}
+.admin-page .logout-button:hover{background-color:#f3f7ff;border-color:#8db4f3}
+.admin-page .login-button:hover{background:#214fcd}
+.admin-page .login-button:disabled{opacity:.65}
+.admin-page :is(a,button,input):focus-visible{outline:3px solid #d8a52f;outline-offset:4px}

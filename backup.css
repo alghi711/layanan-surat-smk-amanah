@@ -1,0 +1,18 @@
+.backup-dialog { width: min(92vw, 680px); max-height: 88vh; padding: 26px; color: #18385c; border: 1px solid #dde7f1; border-radius: 20px; box-shadow: 0 24px 90px #102e5340; }
+.backup-dialog::backdrop { background: #102e537d; backdrop-filter: blur(3px); }
+.backup-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.backup-header h2 { font: 800 24px 'Plus Jakarta Sans', sans-serif; margin: 6px 0 12px; }
+.backup-header > button { width: 34px; height: 34px; flex: none; border: 1px solid #e0e8f1; border-radius: 50%; background: #f6f9fc; color: #49617a; font-size: 23px; cursor: pointer; }
+.backup-intro { margin: 0 0 18px; color: #647b93; font-size: 13px; line-height: 1.7; }
+.backup-create { min-height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: #245ce3; color: #fff; font-weight: 700; cursor: pointer; }
+.backup-message { margin: 12px 0; color: #42617b; font-size: 12px; line-height: 1.6; }
+.backup-list { display: grid; gap: 10px; margin-top: 16px; max-height: 42vh; overflow: auto; }
+.backup-item { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 15px; border: 1px solid #dfe8f2; border-radius: 12px; background: #f9fbfe; }
+.backup-item b { display: block; font-size: 13px; }
+.backup-item small { display: block; margin-top: 6px; color: #75879b; font-size: 11px; }
+.backup-download { flex: none; padding: 10px 12px; border: 1px solid #cbdcf7; border-radius: 9px; background: #fff; color: #245ce3; text-decoration: none; font-weight: 700; font-size: 12px; }
+.backup-empty { padding: 20px; text-align: center; background: #f5f9fe; border: 1px dashed #d2dfed; border-radius: 12px; color: #70849a; font-size: 13px; }
+.backup-note { margin: 18px 0 0; padding: 12px 14px; border: 1px solid #eee0b7; border-radius: 10px; background: #fff9e9; color: #786538; font-size: 11px; line-height: 1.7; }
+@media(max-width:540px) { .backup-dialog { padding: 20px 16px; }.backup-item { padding: 12px; gap: 8px; }.backup-item b { font-size: 11px; }.backup-download { padding: 10px; font-size: 11px; } }
+.dashboard-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.dashboard-tools .refresh-button{white-space:nowrap}@media(max-width:540px){.dashboard-tools{gap:6px}.dashboard-tools .refresh-button{font-size:11px;padding:0 10px}}
+.dashboard-tools .report-link{display:inline-flex;align-items:center;text-decoration:none;width:auto;font-size:12px;background:#edf4ff;color:#185bcc;border-color:#cbdcf7}.dashboard-tools .refresh-button{width:auto}@media(max-width:900px){.page-heading{flex-wrap:wrap}.dashboard-tools{width:100%}.dashboard-tools .refresh-button{font-size:11px;padding:0 10px}}@media(max-width:700px){.dashboard-tools .refresh-button:first-letter{font-size:inherit}}

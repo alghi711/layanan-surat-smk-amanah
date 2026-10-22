@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lacak Surat — SMK Amanah</title>
+  <script>
+    const destination = new URL('index.html', window.location.href);
+    const code = new URLSearchParams(window.location.search).get('code');
+    if (code) destination.searchParams.set('code', code);
+    destination.hash = 'lacak';
+    window.location.replace(destination.href);
+  </script>
+</head>
+<body><p>Pelacakan surat sekarang tersedia di beranda. <a href="index.html#lacak">Buka pelacakan surat</a>.</p></body>
+</html>

@@ -1,0 +1,34 @@
+/* Shared, low-distraction motion for the letter service. */
+:root{scroll-behavior:smooth;scroll-padding-top:22px}
+body{animation:page-appear .38s ease-out both}
+a,button,[role=button],input,select,textarea,.service-card,.form-card,.request-card,.history-card,.status-card,.info-card,.login-card,.role-card,.list-panel,.detail-panel,.stat-card,.step-grid article,.file-link{transition:color .18s ease,background-color .18s ease,border-color .18s ease,box-shadow .2s ease,transform .2s ease,opacity .2s ease}
+button:not(:disabled),[role=button],a.button,.nav-links a,.side-nav a{touch-action:manipulation}
+button:not(:disabled):hover,.button:hover,.nav-cta:hover,.track-row button:hover,.login-button:hover,.refresh-button:hover,.approve-button:hover,.send-principal-button:hover{box-shadow:0 3px 12px #12385b1a}
+button:not(:disabled):active,.button:active,.role-card:active{box-shadow:inset 0 0 0 1px #102e5326}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #f2bd3b;outline-offset:3px}
+.service-card:not(.service-info):hover,.role-card:hover,.info-card:hover,.step-grid article:hover{border-color:#b4ccee;box-shadow:0 6px 18px #12385b12}
+.form-card:focus-within,.login-card:focus-within{box-shadow:0 8px 28px #173a5c10}
+.side-nav a,.side-submenu a{transition:background-color .18s ease,transform .18s ease,color .18s ease}
+.side-nav a:hover,.side-submenu a:hover{background-color:#ffffff12}
+.stepper li span,.status-badge,.status-pill,.big-check,.success-mark,.feedback,.track-result,.action-message{animation:soft-pop .28s ease-out both}
+.timeline li,.table-scroll tbody tr{animation:content-in .3s ease-out both}
+.step-panel:not([hidden]){animation:panel-in .28s ease-out both}
+.nav-links.open{animation:nav-drop .2s ease-out both}
+.motion-appearing{animation:content-in .32s ease-out both}
+.results:not(.hidden),.empty-state:not(.hidden),.detail-body:not(.hidden),.detail-empty:not(.hidden),.role-options:not(.hidden),#empty-list:not(.hidden){animation:panel-in .28s ease-out both}
+.feedback:not(:empty),.track-result:not(:empty),.action-message:not(:empty){animation:content-in .24s ease-out both}
+.side-submenu{animation:submenu-in .2s ease-out both;transform-origin:top}
+dialog[open]{animation:dialog-in .24s cubic-bezier(.2,.8,.2,1) both}
+dialog[open]::backdrop{animation:backdrop-in .2s ease-out both}
+.motion-ready .motion-item{opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.75,.25,1)}
+.motion-ready .motion-item.motion-visible{opacity:1;transform:none}
+.request-card,.status-card,.detail-body{overflow-wrap:anywhere}
+@keyframes page-appear{from{opacity:.55}to{opacity:1}}
+@keyframes soft-pop{from{opacity:.55;transform:scale(.985)}to{opacity:1;transform:none}}
+@keyframes submenu-in{from{opacity:.65;transform:scaleY(.96) translateY(-3px)}to{opacity:1;transform:none}}
+@keyframes dialog-in{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}
+@keyframes backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes content-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@keyframes panel-in{from{opacity:.5;transform:translateX(5px)}to{opacity:1;transform:none}}
+@keyframes nav-drop{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.motion-ready .motion-item{opacity:1;transform:none}}

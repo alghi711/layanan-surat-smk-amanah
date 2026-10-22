@@ -1,0 +1,126 @@
+/* Shared finishing touches for the school portal and staff workspace. */
+:root { --ui-blue: #245ce3; --ui-ink: #123456; --ui-line: #e3ebf3; }
+html { scroll-padding-top: 24px; }
+body { -webkit-font-smoothing: antialiased; }
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+:is(button, a, input, select, textarea):focus-visible {
+  outline: 3px solid #d8a52f;
+  outline-offset: 4px;
+}
+button:disabled { cursor: wait; opacity: .65; }
+.site-wrap { border: 1px solid #e0eaf3; box-shadow: 0 20px 70px #15385f0b; }
+.site-header { background: #fff; border-bottom: 1px solid #e5edf5; }
+.brand-copy small { font-size: 10px; letter-spacing: .15em; }
+.nav-links > a { border-radius: 8px; }
+.nav-links > a:hover, .admin-link:hover { color: #245ce3; }
+.hero {
+  background: radial-gradient(ellipse at 90% 80%, #c9e4f8 0, transparent 58%),
+    linear-gradient(125deg, #f1f8ff, #e8f4ff);
+}
+.pill { background: #fff; color: #245ce3; box-shadow: 0 3px 16px #173a5c09; border: 1px solid #dce9f8; }
+.pill i { background: #d6a63b; }
+.hero h1 { letter-spacing: -.045em; line-height: 1.1; }
+.hero-copy > p { color: #58718a; line-height: 1.65; }
+.hero-actions .button { border-radius: 12px; font-size: 16px; }
+.button.primary, .nav-cta, .login-button, .btn-primary {
+  background: linear-gradient(120deg, #2867ee, #214fcd);
+  box-shadow: 0 7px 16px #245ce31c;
+}
+.button.secondary { background: #ffffffd9; border-color: #cadbf3; color: #214fcd; }
+.trust { color: #4c6a83; line-height: 1.5; }
+.status-float { border: 1px solid #e4edf5; box-shadow: 0 14px 35px #143e6814; border-radius: 14px; }
+.services > .eyebrow, .steps > .eyebrow { letter-spacing: .13em; font-size: 12px; }
+.section-pad h2 { line-height: 1.25; letter-spacing: -.035em; }
+.service-card { border-radius: 16px; border-color: #e2ebf4; box-shadow: 0 4px 16px #143e6806; }
+.service-card.service-info { cursor: default; }
+.service-text small { line-height: 1.6; }
+.service-icon { border-radius: 18px; background: #edf5ff; }
+.track-card { background: linear-gradient(135deg, #153e68, #102c4c); border-radius: 18px; box-shadow: 0 14px 30px #102e531c; }
+.track-row input { border-color: #dbe5ef; border-radius: 10px; }
+.track-row button { background: #f2c85b; border-radius: 10px; }
+.step-grid article { border-radius: 16px; border-color: #e0eaf4; box-shadow: 0 3px 12px #15385f04; }
+.step-grid article > span { background: #fff7df; color: #7c5a10; border: 1px solid #f3e4b6; }
+.step-grid p { line-height: 1.65; }
+.sidebar { background: linear-gradient(165deg, #153b61, #102c4c 70%); }
+.side-brand { align-items: center; }
+.side-brand > span:last-child { margin-top: 0; }
+.side-brand small { font-size: 10px; letter-spacing: .1em; }
+.side-nav a, .side-group summary { border-radius: 10px; }
+.side-nav a:hover { background-color: #ffffff0c; }
+.side-nav a.active { background: linear-gradient(110deg, #2867e9, #2058d3); box-shadow: 0 5px 14px #071c3826; }
+.topbar { background: #ffffffd9; border-bottom-color: #e3ebf3; }
+.breadcrumbs { font-size: 12px; }
+.page-heading h1 { letter-spacing: -.04em; line-height: 1.25; }
+.page-heading p { line-height: 1.6; }
+.form-card, .request-card, .history-card, .status-card, .info-card,
+.search-card, .list-panel, .detail-panel, .stat-card {
+  border-radius: 15px;
+  border-color: #e1eaf3;
+  box-shadow: 0 4px 18px #193e6006;
+}
+.card-heading { margin-bottom: 18px; }
+.card-heading h2 { letter-spacing: -.02em; }
+.card-heading p { line-height: 1.6; }
+.form-card input:not([type=checkbox]):not([type=file]),
+.form-card select, .form-card textarea, .login-form input {
+  min-height: 44px;
+  border-radius: 9px;
+  border-color: #d5e1ed;
+  background: #fcfdff;
+}
+.form-card input:focus, .form-card select:focus, .form-card textarea:focus,
+.login-form input:focus, .search-card input:focus, .track-row input:focus {
+  border-color: #477de0;
+  box-shadow: 0 0 0 3px #245ce310;
+  background: #fff;
+}
+.form-card input::placeholder, .form-card textarea::placeholder { color: #788da3; }
+.btn, .login-button, .refresh-button { min-height: 44px; border-radius: 10px; }
+.action-bar { box-shadow: 0 -6px 22px #18385c06; }
+.upload-zone { border-radius: 12px; background: #f8fbff; }
+.login-card { border-radius: 24px; border-color: #e0e8f0; box-shadow: 0 20px 70px #15385f0c; }
+.login-card .brand { padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid #edf1f6; }
+.login-card .intro { line-height: 1.6; }
+.role-card { border-radius: 13px; }
+.status-badge, .status-pill { line-height: 1.5; }
+.hero-art .school {
+  width: 100%;
+  max-width: 720px;
+  bottom: 18px;
+}
+@media (min-width: 1000px) {
+  .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 20px; align-items: center; padding: 54px 56px 38px; min-height: 570px; }
+  .hero-copy { max-width: none; min-width: 0; }
+  .hero h1 { font-size: clamp(44px, 4.5vw, 62px); margin: 22px 0 16px; }
+  .hero-copy > p { font-size: 17px; margin: 0 0 26px; max-width: 440px; }
+  .hero-art { position: relative; inset: auto; width: 100%; height: 400px; border-radius: 24px; }
+  .hero-art .school { width: 100%; max-width: 720px; bottom: 18px; }
+  .sun-orb { width: 560px; height: 280px; bottom: -55px; }
+  .hero-actions { flex-wrap: wrap; gap: 10px; }
+  .hero-actions .button { min-width: 0; padding: 0 19px; height: 50px; }
+  .trust { font-size: 13px; margin-top: 20px; }
+  .status-float { top: 9%; right: 8%; font-size: 13px; padding: 12px 15px; }
+  .section-pad { padding-top: 44px; padding-bottom: 44px; }
+  .section-pad h2 { font-size: 34px; }
+}
+@media (max-width: 999px) {
+  .hero { min-height: 0; padding-bottom: 330px; }
+  .hero-art { height: 310px; }
+}
+@media (max-width: 700px) {
+  .site-wrap { border: 0; }
+  .hero { padding: 30px 22px 285px; }
+  .hero-art { height: 270px; }
+  .hero-copy > p { font-size: 16px; }
+  .hero h1 { font-size: clamp(36px, 9.5vw, 48px); }
+  .hero-actions .button { height: 52px; }
+  .trust { font-size: 12px; align-items: center; }
+  .service-card { padding: 15px 12px; }
+  .section-pad h2 { font-size: 27px; }
+  .service-text small { font-size: 13px; }
+  .login-card { border-radius: 18px; }
+  .breadcrumbs { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

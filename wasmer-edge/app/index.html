@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef7ff">
+  <meta name="description" content="Ajukan dan lacak surat sekolah SMK Amanah secara online.">
+  <title>Layanan Surat — SMK Amanah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="desktop.css">
+  <link rel="stylesheet" href="motion.css?v=20261020-hover1">
+  <link rel="stylesheet" href="branding.css">
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="campus.css">
+  <link rel="stylesheet" href="home-tracking.css?v=20261022-1">
+  <script>try{if(sessionStorage.getItem('amanah_brand_intro_v2'))document.documentElement.classList.add('school-intro-skip');else sessionStorage.setItem('amanah_brand_intro_v2','1')}catch(e){}</script>
+  <link rel="stylesheet" href="site-loader.css?v=20261019-2">
+  <link rel="preload" as="image" href="assets/logo-smk-amanah.png">
+  <script src="site-loader.js?v=20261019-2" defer></script>
+</head>
+<body>
+  <div class="school-intro" aria-hidden="true">
+    <div class="school-intro-inner">
+      <span class="school-intro-kicker">Selamat datang di</span>
+      <div class="school-intro-mark"><img src="assets/logo-smk-amanah.png" alt="" width="202" height="202" loading="eager" fetchpriority="high"></div>
+      <p class="school-intro-title">SMK AMANAH</p>
+      <p class="school-intro-subtitle">PORTAL LAYANAN SURAT</p>
+      <div class="school-intro-track"></div>
+      <p class="school-intro-caption">Pelayanan mudah, proses transparan.</p>
+    </div>
+  </div>
+  <div class="site-wrap">
+    <div class="ribbon">LAYANAN SURAT <span>·</span> <b>SMK AMANAH</b></div>
+    <header class="site-header">
+      <a class="brand" href="#beranda" aria-label="SMK Amanah, beranda"><span class="school-logo"><img src="assets/logo-smk-amanah.png" alt="Logo SMK Amanah" width="68" height="64"></span><span class="brand-copy"><b>SMK AMANAH</b><small>PORTAL LAYANAN SURAT</small></span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav-links" id="nav-links"><a href="#layanan">Layanan</a><a href="#lacak">Lacak surat</a><a class="admin-nav-link" href="admin.html">Admin</a><button class="nav-cta" data-open="apply-dialog">Ajukan surat <span>→</span></button></nav>
+    </header>
+
+  <main>
+      <section class="hero" id="beranda">
+        <div class="hero-copy"><span class="pill"><i></i> LAYANAN SURAT ONLINE</span><h1>Urus surat sekolah,<br><em>lebih mudah.</em></h1><p>Ajukan surat untuk putra-putri Anda secara online. Pantau prosesnya tanpa perlu bolak-balik ke sekolah.</p><div class="hero-actions"><button class="button primary" data-open="apply-dialog"><span class="sparkle">✦</span> Ajukan Surat</button><a class="button secondary" href="#lacak">Lacak Pengajuan <span>→</span></a></div><div class="trust"><span>✓</span> Praktis dan transparan · pantau status kapan saja</div></div>
+        <div class="hero-art" aria-label="Ilustrasi kampus SMK Amanah">
+          <div class="campus-bar">
+            <div class="campus-name"><strong>SMK AMANAH</strong><small>Portal layanan surat sekolah</small></div>
+            <div class="status-float"><span aria-hidden="true">✓</span><b>Proses transparan</b></div>
+          </div>
+          <svg class="school" viewBox="0 0 800 490" role="img" aria-labelledby="campus-title campus-description">
+            <title id="campus-title">SMK Amanah dengan halaman sekolah dan bendera merah putih</title>
+            <desc id="campus-description">Gedung sekolah dengan pepohonan, taman, tangga, dan jalan masuk yang menyatu dengan halaman.</desc>
+            <defs>
+              <linearGradient id="campus-sky" x2="0" y2="1"><stop stop-color="#f4fbff"/><stop offset="1" stop-color="#dfedf7"/></linearGradient>
+              <linearGradient id="campus-wall" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#ecf2f5"/></linearGradient>
+              <linearGradient id="campus-glass" x2="0.7" y2="1"><stop stop-color="#367da9"/><stop offset="1" stop-color="#183f65"/></linearGradient>
+              <linearGradient id="campus-grass" x2="0" y2="1"><stop stop-color="#b8d9a7"/><stop offset="1" stop-color="#89b783"/></linearGradient>
+              <linearGradient id="campus-court" x2="0" y2="1"><stop stop-color="#dce7ec"/><stop offset="1" stop-color="#c4d4dd"/></linearGradient>
+              <g id="campus-window"><rect width="35" height="44" rx="2" fill="#cadbe7"/><rect x="3" y="3" width="29" height="37" rx="1" fill="url(#campus-glass)"/><path d="M17.5 3v37M3 23h29" stroke="#deedf5" stroke-width="2"/><path d="m6 7 10-1-10 18z" fill="#fff" opacity=".12"/><path d="M-2 45h39" stroke="#d0dee7" stroke-width="4"/></g>
+              <g id="campus-shrub"><ellipse cy="8" rx="25" ry="8" fill="#264e34" opacity=".12"/><circle cx="-13" r="14" fill="#55975b"/><circle cx="10" cy="-2" r="16" fill="#66a56a"/><circle cy="-10" r="14" fill="#80b572"/></g>
+            </defs>
+            <path d="M32 334C58 148 199 47 400 47s342 103 368 287z" fill="url(#campus-sky)"/>
+            <circle cx="635" cy="104" r="27" fill="#f6dda1" opacity=".7"/>
+            <g fill="#fff" opacity=".85"><path d="M99 120c-16-2-19-15-7-21 0-18 26-25 37-9 17-7 32 5 28 18 19 6 12 18-6 18z"/><path d="M597 58c-13-2-15-13-5-18 0-15 22-20 31-7 14-5 26 5 23 15 16 5 10 15-5 15z"/></g>
+            <path d="M26 337c76-80 120-52 191-28 121-43 222-44 338-3 86-35 158-30 219 31v52H26z" fill="#c9dfd1"/>
+            <path d="M24 354Q400 307 776 354l-24 65Q400 460 48 419z" fill="url(#campus-grass)"/>
+            <ellipse cx="400" cy="370" rx="308" ry="33" fill="#315350" opacity=".14"/>
+            <path d="M34 389Q400 356 766 389l-17 43Q400 477 51 432z" fill="url(#campus-court)" stroke="#d5e2e8" stroke-width="2"/>
+            <path d="M51 432Q400 474 749 432v8Q400 485 51 440z" fill="#b8cdd7"/>
+            <path d="M139 189h531v168H139z" fill="#c3d5df"/>
+            <path d="M130 184h540v170H130z" fill="url(#campus-wall)" stroke="#cbdae4" stroke-width="2"/>
+            <path d="M122 179h556v13H122z" fill="#b5cbdc"/>
+            <path d="M122 179h556v5H122z" fill="#eef4f8"/>
+            <path d="M130 272h540" stroke="#d6e3eb" stroke-width="8"/>
+            <path d="M130 268h540" stroke="#fff" stroke-width="4"/>
+            <g><use href="#campus-window" x="147" y="210"/><use href="#campus-window" x="199" y="210"/><use href="#campus-window" x="251" y="210"/><use href="#campus-window" x="514" y="210"/><use href="#campus-window" x="566" y="210"/><use href="#campus-window" x="618" y="210"/>
+            <use href="#campus-window" x="147" y="294"/><use href="#campus-window" x="199" y="294"/><use href="#campus-window" x="251" y="294"/><use href="#campus-window" x="514" y="294"/><use href="#campus-window" x="566" y="294"/><use href="#campus-window" x="618" y="294"/></g>
+            <path d="M284 155h232v203H284z" fill="#b4cbdc"/>
+            <path d="M294 151h212v209H294z" fill="url(#campus-wall)" stroke="#c9dce9" stroke-width="2"/>
+            <path d="m274 151 126-60 126 60v16H274z" fill="#163e6b"/>
+            <path d="m274 151 126-60 126 60" fill="none" stroke="#2b5b89" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M294 167h212v6H294z" fill="#9bb4c8" opacity=".35"/>
+            <image class="building-logo" href="assets/logo-smk-amanah.png" x="352" y="151" width="96" height="96" preserveAspectRatio="xMidYMid meet"/>
+            <rect x="313" y="237" width="174" height="35" rx="4" fill="#174776"/>
+            <path d="M318 241h164" stroke="#3b6b98" stroke-width="2"/>
+            <text x="400" y="261" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="19" font-weight="800" letter-spacing="1">SMK AMANAH</text>
+            <path d="M305 285h15v75h-15zm175 0h15v75h-15z" fill="#dfd7bd"/>
+            <path d="M305 285h4v75h-4zm175 0h4v75h-4z" fill="#f3edda"/>
+            <rect x="354" y="288" width="92" height="73" rx="2" fill="#c1d5e4"/>
+            <path d="M359 293h82v67h-82z" fill="url(#campus-glass)"/>
+            <path d="M400 293v67M359 308h82" stroke="#dfedf5" stroke-width="3"/>
+            <path d="M393 326v8m14-8v8" stroke="#e2c981" stroke-width="2" stroke-linecap="round"/>
+            <path d="M338 361h124v8H338z" fill="#dbe4e9"/><path d="M330 369h140v7H330z" fill="#c1d1dc"/><path d="M323 376h154v6H323z" fill="#e3ebef"/>
+            <path d="M365 382h70l60 68q-95 7-190 0z" fill="#f0ede4" stroke="#d6d9d6" stroke-width="1.5"/>
+            <path d="m383 382-18 71m52-71 18 71m-85-49h100m-123 25h146" stroke="#d2d6d2" stroke-width="1.5"/>
+            <g><use href="#campus-shrub" x="208" y="361"/><use href="#campus-shrub" x="257" y="363"/><use href="#campus-shrub" x="550" y="362"/><use href="#campus-shrub" x="601" y="360"/></g>
+            <g><path d="M303 371h27l-4 22h-19z" fill="#244f71"/><use href="#campus-shrub" x="316" y="365" transform="translate(95 109) scale(.7)"/><path d="M470 371h27l-4 22h-19z" fill="#244f71"/><use href="#campus-shrub" x="483" y="365" transform="translate(145 109) scale(.7)"/></g>
+            <g><ellipse cx="73" cy="382" rx="35" ry="9" fill="#315350" opacity=".14"/><path d="M67 288h12v94H67z" fill="#8d7350"/><path d="m73 323-19-20m19 8 17-21" stroke="#8d7350" stroke-width="6" stroke-linecap="round"/><circle cx="59" cy="279" r="32" fill="#43885b"/><circle cx="84" cy="277" r="35" fill="#579961"/><circle cx="71" cy="251" r="30" fill="#79ad6a"/><circle cx="48" cy="264" r="18" fill="#8aba75"/>
+            <ellipse cx="727" cy="382" rx="35" ry="9" fill="#315350" opacity=".14"/><path d="M721 288h12v94h-12z" fill="#8d7350"/><path d="m727 320-16-19m16 10 18-20" stroke="#8d7350" stroke-width="6" stroke-linecap="round"/><circle cx="712" cy="279" r="33" fill="#43885b"/><circle cx="738" cy="277" r="34" fill="#579961"/><circle cx="728" cy="250" r="30" fill="#79ad6a"/><circle cx="749" cy="262" r="18" fill="#8aba75"/></g>
+            <g class="indonesia-flag" aria-label="Bendera Indonesia merah putih"><path d="M550 142v220" stroke="#7890a2" stroke-width="3"/><circle cx="550" cy="140" r="3" fill="#cba75c"/><path class="flag-red" d="M552 148c19-8 38 8 57 0v19c-19 8-38-8-57 0z" fill="#e63745"/><path class="flag-white" d="M552 167c19-8 38 8 57 0v19c-19 8-38-8-57 0z" fill="#fff" stroke="#d5e1e9" stroke-width=".7"/><rect x="539" y="361" width="22" height="5" rx="2" fill="#a9bdca"/></g>
+            <g fill="#779e81"><path d="M102 396v-43m0 24-10-12m10 3 10-13M691 396v-43m0 24-10-12m10 3 10-13" stroke="#829694" stroke-width="3" stroke-linecap="round"/><circle cx="102" cy="350" r="7" fill="#fff4ce"/><circle cx="691" cy="350" r="7" fill="#fff4ce"/></g>
+            <path d="M47 416q79-15 156 4l-7 10q-77-16-146-4zm550 4q77-19 156-4l-3 10q-69-12-146 4z" fill="#84ac85"/>
+            <g fill="#e4c377"><circle cx="89" cy="418" r="3"/><circle cx="117" cy="417" r="3"/><circle cx="159" cy="422" r="3"/><circle cx="646" cy="421" r="3"/><circle cx="688" cy="417" r="3"/><circle cx="716" cy="419" r="3"/></g>
+          </svg>
+          <div class="campus-caption"><span aria-hidden="true">▤</span><div><b>Pengajuan jelas, proses transparan.</b><p>Ajukan dari rumah, pantau hingga surat siap diterima.</p></div></div>
+        </div>
+      </section>
+
+      <section class="services section-pad" id="layanan"><span class="eyebrow">LAYANAN KAMI</span><h2>Semua urusan surat, satu tempat</h2><div class="service-list"><button class="service-card" data-open="apply-dialog"><span class="service-icon">▤<i>＋</i></span><span class="service-text"><b>Ajukan dengan mudah</b><small>Pilih jenis surat, isi data, dan ajukan secara online dalam beberapa langkah.</small></span><span class="chevron">›</span></button><article class="service-card service-info"><span class="service-icon search-icon">⌕</span><span class="service-text"><b>Pantau setiap proses</b><small>Cek status pengajuan Anda secara real-time dan transparan.</small></span></article><article class="service-card service-info"><span class="service-icon seal-icon">▤<i>✦</i></span><span class="service-text"><b>Terima surat resmi</b><small>Dapatkan surat yang sah dan ditandatangani oleh pihak sekolah.</small></span></article></div>
+        <form class="track-card" id="lacak-form"><div class="track-heading"><span class="track-icon">⌕</span><div><h3 id="lacak">Sudah punya nomor pelacakan?</h3><p>Masukkan nomor pelacakan untuk melihat status pengajuan surat Anda.</p></div></div><div class="track-row"><label class="sr-only" for="tracking-number">Nomor pelacakan</label><input id="tracking-number" placeholder="Nomor pelacakan (contoh: SA-202610-...)" autocomplete="off" required><button type="submit">Lacak Surat <span>→</span></button></div><p class="track-result" id="track-result" aria-live="polite"></p></form>
+        <div class="home-tracking">
+<div class="results hidden" id="results">
+        <div class="main-column">
+          <article class="request-card"><header class="request-title"><span class="document-icon">▤</span><div><h2 id="request-type">Pengajuan Surat</h2><p>Nomor pelacakan: <b id="request-code"></b></p></div><span class="status-pill" id="status-pill"></span></header><div class="request-meta"><div><small>Nama siswa</small><b id="student-name">—</b></div><div><small>Kelas</small><b id="student-class">—</b></div><div><small>Tanggal pengajuan</small><b id="submitted-date">—</b></div><div><small>Keperluan</small><b id="purpose-text">—</b></div></div></article>
+          <article class="history-card"><h2>Riwayat Proses</h2><ol class="timeline" id="timeline"></ol></article>
+        </div>
+        <aside class="side-column"><article class="status-card" id="status-card"><span class="big-check" id="status-symbol">✓</span><h2 id="status-title">Pengajuan sedang diproses</h2><p id="status-description">Tata Usaha akan memeriksa data pengajuan Anda.</p><div class="letter-placeholder" id="letter-placeholder"><span>▤</span><div><b>Surat resmi</b><small>Belum tersedia untuk diunduh</small></div></div><button class="download-button" id="download-button" type="button" disabled>↓ &nbsp; Unduh Surat</button><button class="view-button" id="view-button" type="button" disabled>◉ &nbsp; Lihat Surat</button></article>
+          <article class="info-card"><span>▤</span><div><h3 id="note-title">Catatan Tata Usaha</h3><p id="tu-note">Belum ada catatan dari Tata Usaha.</p></div></article>
+          <article class="info-card help-card"><span>ⓘ</span><div><h3>Butuh bantuan?</h3><p>Hubungi Tata Usaha sekolah.</p></div><a href="mailto:tu@smkamanah.sch.id?subject=Bantuan%20Pelacakan%20Surat">Hubungi TU</a></article>
+          <p class="updated-at" id="updated-at"></p>
+        </aside>
+      </div>
+          <div id="empty-state" class="hidden"></div>
+        </div>
+      </section>
+
+      <section class="steps section-pad" id="alur"><span class="eyebrow">ALUR PENGAJUAN</span><h2>Jelas langkahnya, mudah prosesnya</h2><div class="step-grid"><article><span>01</span><b>Orang tua mengajukan</b><p>Isi data siswa, pilih jenis surat, dan jelaskan keperluannya.</p></article><article><span>02</span><b>TU memeriksa</b><p>Petugas tata usaha mengonfirmasi atau memberi catatan pengajuan.</p></article><article><span>03</span><b>Surat disiapkan</b><p>TU membuat surat dan mengunggah dokumen untuk ditinjau.</p></article><article><span>04</span><b>Kepala sekolah menyetujui</b><p>Setelah disetujui, surat resmi siap diterima oleh orang tua.</p></article></div></section>
+      <footer><div class="footer-brand"><span class="school-logo school-logo--footer"><img src="assets/logo-smk-amanah.png" alt="Logo SMK Amanah" width="68" height="64"></span><b>SMK AMANAH</b></div><span>Portal layanan surat sekolah · Praktis, tertib, transparan</span><a class="admin-link" href="admin.html">Login Admin</a></footer>
+    </main>
+  </div>
+
+  <script src="app.js?v=20261022-home-track1"></script>
+  <script src="pelacakan.js?v=20261022-home-track1"></script>
+  <script src="motion.js"></script>
+</body>
+</html>
+
